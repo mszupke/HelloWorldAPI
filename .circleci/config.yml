@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/openjdk:16.0.1-jdk-buster
 
-    working_directory: ~/sample-springboot-api
+    working_directory: ~/hello-world-api
 
     steps:
       - checkout
@@ -12,14 +12,14 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-          - sample-springboot-api-{{ checksum "pom.xml" }}
+          - hello-world-api-{{ checksum "pom.xml" }}
 
       - run: mvn dependency:go-offline
 
       - save_cache:
           paths:
             - ~/.m2
-          key: sample-springboot-api-{{ checksum "pom.xml" }}
+          key: hello-world-api-{{ checksum "pom.xml" }}
 
       # package into a jar
       - run: mvn clean package
