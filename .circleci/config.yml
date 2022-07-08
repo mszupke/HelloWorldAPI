@@ -21,6 +21,9 @@ jobs:
             - ~/.m2
           key: hello-world-api-{{ checksum "pom.xml" }}
 
+      # run tests
+      - run: mvn test
+
       # package into a jar
       - run: mvn clean package
 
