@@ -11,4 +11,11 @@ public class HelloRequest {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "HelloRequest{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }
