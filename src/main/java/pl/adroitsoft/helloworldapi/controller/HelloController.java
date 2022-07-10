@@ -29,6 +29,9 @@ public class HelloController {
             int a = 1 / 0;
 
         } catch (Exception ex) {
+
+            // .. jeżeli jesteśmy w stanie obsłużyć wyjątek i przejść dalej z logiką to warn
+
             LOGGER.error("Error while getting something", ex);
         }
 
