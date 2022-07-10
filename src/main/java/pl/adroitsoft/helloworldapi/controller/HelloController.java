@@ -16,7 +16,7 @@ public class HelloController {
     public String hello(@RequestBody HelloRequest helloRequest) {
 
         // logback / log4j / java.util.Logging / JCL (Jakarta Common Logging)
-        LOGGER.trace(helloRequest.toString());
+        // LOGGER.trace(helloRequest.toString());
         LOGGER.debug(helloRequest.toString());
         LOGGER.info(helloRequest.toString());
         LOGGER.warn(helloRequest.toString());
