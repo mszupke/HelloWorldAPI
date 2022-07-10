@@ -9,7 +9,7 @@ class HelloWorldApiApplicationTests {
 
     @Test
     void contextLoads() {
-        Assert.isTrue(true, "failed assertion");
+        Assert.isTrue(false, "failed assertion");
     }
 
 }
